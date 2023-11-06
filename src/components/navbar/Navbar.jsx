@@ -3,6 +3,23 @@ import './navbar.scss'
 import { motion } from 'framer-motion';
 
 // ... Other imports
+const socials = [
+    {
+        id: 0,
+        name: '/facebook.png',
+        link: 'https://www.facebook.com/profirescu.matheos/',
+    },
+    {
+        id: 1,
+        name: '/linkedin.png',
+        link: 'https://www.linkedin.com/in/matheos-profirescu-2a8778172/',
+    },
+    {
+        id: 2,
+        name: '/instagram.png',
+        link: 'https://www.instagram.com/matheosprofirescu/',
+    },
+]
 
 const Navbar = () => {
     // variants for the container
@@ -41,12 +58,11 @@ const Navbar = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
                 >
-                    Profirescu Matheos
                 </motion.span>
                 <motion.div className="social" variants={containerVariants} initial="hidden" animate="visible">
-                    {['/facebook.png', '/instagram.png', '/youtube.png', '/dribbble.png'].map((icon, index) => (
-                        <motion.a key={index} variants={itemVariants}>
-                            <img src={icon} alt="" />
+                    {socials.map((s, index) => (
+                        <motion.a href={s.link} key={index} variants={itemVariants}>
+                            <img src={s.name} alt="" />
                         </motion.a>
                     ))}
                 </motion.div>

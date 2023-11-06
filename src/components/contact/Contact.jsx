@@ -59,15 +59,15 @@ const Contact = () => {
                 <motion.h1 variants={variants}>Let’s work together</motion.h1>
                 <motion.div className="item" variants={variants}>
                     <h2>Mail</h2>
-                    <span>hello@react.dev</span>
+                    <span>matheosprofirescu@yahoo.com</span>
                 </motion.div>
                 <motion.div className="item" variants={variants}>
-                    <h2>Address</h2>
-                    <span>Hello street New York</span>
+                    <h2>Country</h2>
+                    <span>Romania</span>
                 </motion.div>
                 <motion.div className="item" variants={variants}>
                     <h2>Phone</h2>
-                    <span>+1 234 5678</span>
+                    <span>+40 0734 504 657</span>
                 </motion.div>
             </motion.div>
             <div className="formContainer">
@@ -105,7 +105,7 @@ const Contact = () => {
                     onSubmit={sendEmail}
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    transition={{ delay: 4, duration: 1 }}
+                    transition={{ delay: 3, duration: 1 }}
                 >
                     <input type="text" required placeholder="Name" name="name" />
                     <input type="email" required placeholder="Email" name="email" />

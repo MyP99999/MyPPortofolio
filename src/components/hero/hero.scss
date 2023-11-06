@@ -64,6 +64,13 @@
                     cursor: pointer;
                     font-weight: 300;
                 }
+
+                button:hover {
+                    background-color: rgb(223, 245, 245);
+                    color: rebeccapurple;
+                    font-weight: bold;
+                    border: 1px solid rebeccapurple;
+                }
             }
 
             img {
@@ -76,22 +83,33 @@
         height: 100%;
         position: absolute;
         top: 0;
-        right: 0;
+        right: 300px;
+
+        @include desktop {
+            right: 0;
+
+        }
 
         @include tablet {
             height: 50%;
             width: 100%;
             top: unset;
             bottom: 0;
+            right: 0;
         }
 
 
-
-
         img {
-            width: 80%;
-            height: 80%;
+            width: 90%;
+            height: 90%;
             object-fit: cover;
+            border-radius: 100px;
+
+            @include desktop {
+                object-fit: contain;
+                width: 80%;
+                height: 80%;
+            }
 
             @include tablet {
                 object-fit: contain;
@@ -109,5 +127,6 @@
         color: #ffffff09;
         width: 50%;
         font-weight: bold;
+        pointer-events: none; // Add this line
     }
 }
