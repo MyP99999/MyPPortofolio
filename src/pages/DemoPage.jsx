@@ -78,18 +78,21 @@ const DemoPage = () => {
                 <motion.div className={styles.details}>
                     <motion.h2 variants={textVariants}>{item.title}</motion.h2>
                     <motion.p variants={textVariants}>{item.desc}</motion.p>
-                    <motion.a
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.button}
-                        variants={buttonVariants}
-                        initial="hidden"
-                        animate="visible"
-                        whileHover="hover"
-                    >
-                        See Demo
-                    </motion.a>
+                    <motion.p variants={textVariants}>{item.tech}</motion.p>
+                    {item.link &&
+                        <motion.a
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.button}
+                            variants={buttonVariants}
+                            initial="hidden"
+                            animate="visible"
+                            whileHover="hover"
+                        >
+                            See Demo
+                        </motion.a>
+                    }
                 </motion.div>
             </motion.div>
         </div>

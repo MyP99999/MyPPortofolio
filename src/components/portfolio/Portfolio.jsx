@@ -18,6 +18,15 @@ const Single = ({ item }) => {
     const goToDemo = () => {
         navigate(`/demo/${item.id}`);
     };
+
+    const trimDescription = (desc, wordLimit) => {
+        const words = desc.split(' ');
+        if (words.length > wordLimit) {
+            return words.slice(0, wordLimit).join(' ') + '...';
+        }
+        return desc;
+    };
+
     return (
         <section >
             <div className="container">
@@ -27,8 +36,8 @@ const Single = ({ item }) => {
                     </div>
                     <motion.div className="textContainer" style={{ y }}>
                         <h2>{item.title}</h2>
-                        <p>{item.desc}</p>
-                        <button onClick={goToDemo}>See Demo</button>
+                        <p>{trimDescription(item.desc, 50)}</p>
+                        <button onClick={goToDemo}>See More</button>
                     </motion.div>
                 </div>
             </div>
