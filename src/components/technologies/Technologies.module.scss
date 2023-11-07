@@ -1,0 +1,121 @@
+.experience {
+    display: flex;
+    align-items: center;
+    background-color: linear-gradient(180deg, #0c0c1d, #111132);
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        .heading {
+            margin-top: 3rem;
+            text-align: center;
+
+            .title {
+                font-size: 2.5rem;
+                font-weight: bold;
+                padding-bottom: 0.5rem;
+                margin-bottom: 0.5rem;
+                display: inline-block;
+                border-bottom: 4px solid gray;
+            }
+
+            .description {
+                padding-top: 1.5rem;
+            }
+        }
+
+        .techGrid {
+            /* Corrected from tech-grid to techGrid */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 2rem;
+            text-align: center;
+
+            @media (min-width: 640px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .techCard {
+                /* Make sure this matches the JSX */
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                transition: transform 0.5s;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                img {
+                    /* If you want to use a specific class for images */
+                    width: 5rem;
+                    margin: auto;
+                }
+
+                .techTitle {
+                    /* Make sure this matches the JSX */
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+.shadow-orange {
+    box-shadow: 0 4px 6px rgba(#FFA500, 0.3);
+}
+
+// Example for orange
+.shadow-blue {
+    box-shadow: 0 4px 6px rgba(#0000FF, 0.3);
+}
+
+// Example for blue
+.shadow-yellow {
+    box-shadow: 0 4px 6px rgba(#FFFF00, 0.3);
+}
+
+// Example for yellow
+.shadow-darkblue {
+    box-shadow: 0 4px 6px rgba(#00008B, 0.3);
+}
+
+// Example for dark blue
+.shadow-deeporange {
+    box-shadow: 0 4px 6px rgba(#FF4500, 0.3);
+}
+
+// Example for deep orange
+.shadow-sky {
+    box-shadow: 0 4px 6px rgba(#87CEEB, 0.3);
+}
+
+// Example for sky blue
+.shadow-gray {
+    box-shadow: 0 4px 6px rgba(#808080, 0.3);
+}
+
+// Example for gray
+.shadow-lightorange {
+    box-shadow: 0 4px 6px rgba(#FFA07A, 0.3);
+}
+
+.shadow-green {
+    box-shadow: 0 4px 6px rgba(0, 128, 0, 0.3); // this is a common green color
+}
+
+.shadow-lightblue {
+    box-shadow: 0 4px 6px rgba(173, 216, 230, 0.3); // this is a light blue color, similar to sky blue
+}

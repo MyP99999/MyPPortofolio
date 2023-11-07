@@ -6,6 +6,7 @@ import Navbar from "../components/navbar/Navbar";
 import Parallax from "../components/parallax/Parallax";
 import Portfolio from "../components/portfolio/Portfolio";
 import Services from "../components/services/Services";
+import Technologies from "../components/technologies/Technologies";
 
 const FirstPage = () => {
     return (
@@ -18,6 +19,9 @@ const FirstPage = () => {
             <section><Services /></section>
             <section id="Portfolio"><Parallax type="portfolio" /></section>
             <Portfolio />
+            <section id="Technologies">
+                <Technologies />
+            </section>
             <section id="Contact">
                 <Contact />
             </section>

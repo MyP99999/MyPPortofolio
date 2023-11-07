@@ -16,8 +16,8 @@ const socials = [
     },
     {
         id: 2,
-        name: '/instagram.png',
-        link: 'https://www.instagram.com/matheosprofirescu/',
+        name: '/icons/github.png',
+        link: 'https://github.com/MyP99999',
     },
 ]
 
