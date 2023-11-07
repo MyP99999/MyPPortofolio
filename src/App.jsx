@@ -1,30 +1,22 @@
-import "./app.scss"
-import Contact from "./components/contact/Contact";
+import "./app.scss";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import DemoPage from "./pages/DemoPage";
+import FirstPage from "./pages/FirstPage";
+import NotFoundPage from "./pages/NotFoundPage"; // Make sure to create this component
 import Cursor from "./components/cursor/Cursor";
-import Hero from "./components/hero/Hero";
-import Navbar from "./components/navbar/Navbar";
-import Parallax from "./components/parallax/Parallax";
-import Portfolio from "./components/portfolio/Portfolio";
-import Services from "./components/services/Services";
 
 const App = () => {
   return (
-    <div>
+    <Router>
       <Cursor />
-      <section id="Homepage">
-        <Navbar />
-        <Hero />
-      </section>
-      <section id="Services"><Parallax type="services" /></section>
-      <section><Services /></section>
-      <section id="Portfolio"><Parallax type="portfolio" /></section>
-      <Portfolio />
-      <section id="Contact">
-        <Contact />
-      </section>
-    </div>
-  )
-
+      <Routes>
+        <Route path="/" element={<FirstPage />} />
+        <Route path="/demo/:id" element={<DemoPage />} />
+        <Route path="*" element={<NotFoundPage />} /> {/* Catch-all route */}
+      </Routes>
+    </Router>
+  );
 };
 
 export default App;

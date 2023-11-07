@@ -80,7 +80,7 @@
                 }
             }
 
-            button {
+            a {
                 width: 300px;
                 height: 100px;
                 border-radius: 50px;
@@ -88,6 +88,11 @@
                 border: none;
                 font-size: 24px;
                 cursor: pointer;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
 
                 @include tablet {
                     font-size: 16px;
@@ -96,7 +101,7 @@
                 }
             }
 
-            button:hover {
+            a:hover {
                 background-color: #ff7300;
             }
         }
@@ -134,11 +139,12 @@
                 }
             }
 
-            button {
+            a {
                 padding: 10px;
                 background-color: orange;
                 border: none;
                 cursor: pointer;
+                text-align: center;
 
                 @include tablet {
                     background-color: transparent;
@@ -150,7 +156,7 @@
                 }
             }
 
-            button:hover {
+            a:hover {
                 background-color: #ff7300;
             }
         }

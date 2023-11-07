@@ -54,7 +54,7 @@
             }
 
             .buttons {
-                button {
+                a {
                     padding: 20px;
                     border: 1px solid white;
                     border-radius: 10px;
@@ -65,7 +65,7 @@
                     font-weight: 300;
                 }
 
-                button:hover {
+                a:hover {
                     background-color: rgb(223, 245, 245);
                     color: rebeccapurple;
                     font-weight: bold;
